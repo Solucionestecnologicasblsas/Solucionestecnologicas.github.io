@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciones Tecnológicas Bl Sas</title>
+  <style>
+    /* ======= ESTILOS GENERALES ======= */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-image: url("fondo.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* ======= MENÚ SUPERIOR ======= */
+    .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .menu li a:hover {
+      color: #4a90e2;
+      transform: scale(1.1);
+    }
+
+    /* ======= ENCABEZADO ======= */
+    header {
+      background: linear-gradient(135deg, #3a3a3a, #6b6b6b, #4a90e2);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .barra-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    header .contacto-rapido {
+      font-size: 1em;
+      margin-top: 10px;
+      color: #e6e6e6;
+    }
+
+    /* ======= CUERPO PRINCIPAL ======= */
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #1a1a1a;
+      border-left: 5px solid #4a90e2;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 2px solid #ccc;
+    }
+
+    /* ======= GALERÍA ======= */
+    .galeria {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .galeria img {
+      width: 260px;
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+
+    .grupo h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    .contenedor-galeria {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      justify-items: center;
+    }
+
+    .contenedor-galeria img {
+      width: 220px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+
+    /* ======= FORMULARIO ======= */
+    .contacto {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3c78c4;
+    }
+
+    /* ======= MARCAS Y CLIENTES ======= */
+    .seccion-final {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .seccion-final h2 {
+      border-left: none;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .seccion-final p {
+      margin: 10px 0 25px;
+    }
+
+    .seccion-final img {
+      width: 240px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .logo-final {
+      width: 150px;
+      height: auto;
+      margin-top: 40px;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .logo-final:hover {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+
+    /* ======= PIE DE PÁGINA ======= */
+    footer {
+      background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 768px) {
+      .contenedor-galeria {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .galeria img, .contenedor-galeria img, .seccion-final img {
+        width: 100%;
+        height: auto;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      main {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contenedor-galeria {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ======= LIGHTBOX ======= */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-contenido {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.7); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    .cerrar {
+      position: absolute;
+      top: 25px;
+      right: 45px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .cerrar:hover {
+      color: #4a90e2;
+    }
+  </style>
+</head>
+<body background="fondo.jpg">
+
+  <header>
+    <div class="barra-logo">
+      <h1>Soluciones Tecnológicas Bl Sas</h1>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#mision">Misión</a></li>
+        <li><a href="#vision">Visión</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#marcas">Multimarcas</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+      </ul>
+    </nav>
+
+    <div class="contacto-rapido">
+      📞 <strong>+57 311 2603012 | +57 311 2582578 | +57 319 6463746</strong> |
+      ✉️ <strong>Solucionestecnologicasbl@gmail.com</strong>
+    </div>
+  </header>
+
+  <main>
+    <section id="nosotros">
+      <h2>Nosotros</h2>
+      <p>Somos una empresa especializada hace más de 8 años en brindar soluciones tecnológicas en el mantenimiento preventivo, correctivo y modernización de sistemas de transporte vertical. Contamos con un equipo de profesionales con más de 20 años de experiencia en el sector.</p>
+      <div class="galeria">
+        <img src="escaleras.png" alt="Escaleras">
+        <img src="ascensor.png" alt="Ascensor moderno">
+        <img src="puerta.png" alt="Puertas">
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="mision">
+      <h2>Misión</h2>
+      <p>Nos enfocamos en garantizar la seguridad, continuidad operativa y satisfacción de nuestros clientes...</p>
+    </section>
+
+    <section id="vision">
+      <h2>Visión</h2>
+      <p>Para el año 2030, consolidarnos como la empresa líder en soluciones tecnológicas integrales...</p>
+    </section>
+
+    <hr>
+
+    <section id="valores">
+      <h2>Valores</h2>
+      <ul>
+        <li><strong>1. Calidad Técnica:</strong> Nos comprometemos con altos estándares técnicos.</li>
+        <li><strong>2. Seguridad:</strong> Priorizamos la seguridad en todos nuestros procesos.</li>
+        <li><strong>3. Innovación:</strong> Incorporamos nuevas tecnologías.</li>
+        <li><strong>4. Confiabilidad:</strong> Construimos relaciones basadas en la confianza y cumplimiento.</li>
+        <li><strong>5. Compromiso con el Cliente:</strong> Ofrecemos soluciones personalizadas.</li>
+        <li><strong>6. Responsabilidad:</strong> Actuamos con ética, transparencia y respeto.</li>
+        <li><strong>7. Trabajo en Equipo:</strong> Fomentamos la colaboración para resultados superiores.</li>
+      </ul>
+      <div class="galeria">
+      </ul>
+      <div class="galeria">
+        <img src="puertas.png" alt="">
+        <img src="diagram5.png" alt="">
+        <img src="ascenso1.png" alt="">
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="galeria" class="galeria">
+      <h2>GALERÍA</h2>
+      <div class="grupo">
+        <h3>Ascensores</h3>
+        <div class="contenedor-galeria">
+          <img src="asc1.png" alt="Ascensor 1">
+          <img src="asc2.png" alt="Ascensor 2">
+          <img src="asc3.png" alt="Ascensor 3">
+          <img src="asc4.png" alt="Ascensor 4">
+        </div>
+      </div>
+      <div class="grupo">
+        <h3>Escaleras</h3>
+        <div class="contenedor-galeria">
+          <img src="esc1.png" alt="Escalera 1">
+          <img src="esc2.png" alt="Escalera 2">
+          <img src="esc3.png" alt="Escalera 3">
+          <img src="esc4.png" alt="Escalera 4">
+        </div>
+      </div>
+      <div class="grupo">
+        <h3>Puertas</h3>
+        <div class="contenedor-galeria">
+          <img src="pue1.png" alt="Puerta 1">
+          <img src="pue2.png" alt="Puerta 2">
+          <img src="pue3.png" alt="Puerta 3">
+          <img src="pue4.png" alt="Puerta 4">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+     <form
+  action="https://formspree.io/f/xovpwkow"
+  method="POST"
+>
+  <label>
+    <input class="controls" type="text" name="Nombres" id="Nombres" placeholder="Ingrese su nombre">
+    <input class="controls" type="text" name="Apellidos" id="Apellidos" placeholder="Ingrese su apellido">
+    <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Ingrese su numero">
+    <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
+  </label>
+  <label>
+    <textarea class="controls" name="message" placeholder="Asunto"></textarea>
+  </label>
+  <button class="controls" type="submit" value="Enviar">Enviar</button>
+</form>
+    </section>
+
+    <hr>
+
+    <section id="marcas" class="seccion-final">
+      <h2>MultiMarcas</h2>
+      <p>Manejamos toda clase de marcas.</p>
+      <img src="marcas.png" alt="Marcas">
+    </section>
+
+    <hr>
+
+    <section id="clientes" class="seccion-final">
+      <h2>Nuestros Clientes</h2>
+      <p>Empresas que confían en nuestros servicios y soluciones.</p>
+      <img src="margen2.png" alt="Clientes">
+      <br>
+      <img src="logo2.png" alt="Logo de la empresa" class="logo-final">
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Soluciones Tecnológicas Bl Sas |+57 311 2603012 | +57 311 2582578 | +57 319 6463746| ✉️ Solucionestecnologicasbl@gmail.com</p>
+  </footer>
+
+  <!-- ======= LIGHTBOX HTML ======= -->
+  <div id="lightbox" class="lightbox">
+    <span class="cerrar">&times;</span>
+    <img class="lightbox-contenido" id="imagenAmpliada">
+  </div>
+
+  <script>
+    // === SCRIPT PARA EL LIGHTBOX ===
+    const lightbox = document.getElementById("lightbox");
+    const imagenAmpliada = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("click", () => {
+        imagenAmpliada.src = img.src;
+        lightbox.style.display = "block";
+      });
+    });
+
+    cerrar.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) lightbox.style.display = "none";
+    });
+  </script>
+</body>
+</html>
